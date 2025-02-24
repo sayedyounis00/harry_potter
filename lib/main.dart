@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:harry_potter/feature/home/view/home_view.dart';
-import 'package:harry_potter/feature/welcome/welcome_page.dart';
+import 'package:harry_potter/core/routing/router.dart';
 
 void main() {
   runApp(const HarryPotter());
@@ -13,7 +12,8 @@ class HarryPotter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: WelcomeView(),
+      debugShowCheckedModeBanner: false,
+      onGenerateRoute: onGenerate,
     );
   }
 }
