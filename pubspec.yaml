@@ -30,10 +30,12 @@ environment:
 dependencies:
   cached_network_image: ^3.4.1
   cupertino_icons: ^1.0.8
+  dartz: ^0.10.1
+  dio: ^5.8.0+1
   flutter:
     sdk: flutter
-  google_fonts: ^6.2.1
-  quick_quiz: ^1.0.1
+  flutter_bloc: ^9.0.0
+  get_it: ^8.0.3
 
 dev_dependencies:
   flutter_lints: ^4.0.0
