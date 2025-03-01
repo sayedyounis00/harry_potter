@@ -101,6 +101,7 @@ class CharacterDetailedViewBody extends StatelessWidget {
                           width: 30,
                           height: 15,
                           decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 1),
                             color: Colors.green[700],
                             borderRadius: BorderRadius.circular(4),
                           ),
@@ -118,6 +119,7 @@ class CharacterDetailedViewBody extends StatelessWidget {
                           width: 30,
                           height: 15,
                           decoration: BoxDecoration(
+                            border: Border.all(color: Colors.white, width: 1),
                             color: Colors.black,
                             borderRadius: BorderRadius.circular(4),
                           ),
@@ -147,4 +149,3 @@ class CharacterDetailedViewBody extends StatelessWidget {
     );
   }
 }
-

@@ -19,7 +19,7 @@ class WrapTitleWidget extends StatelessWidget {
         ])
           Chip(
             label: Text(name),
-            backgroundColor: Colors.grey[200],
+            backgroundColor: Colors.black,
           ),
       ],
     );

@@ -14,7 +14,6 @@ class HarryPotter extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         brightness: Brightness.dark,
-        fontFamily: "harry",
       ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerate,
