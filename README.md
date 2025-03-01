@@ -1,6 +1,9 @@
 # 🧙‍♂️ Welcome to the Wizarding World of Code! 🪄
 
-![Hogwarts Crest](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Hogwarts_coat_of_arms_colored_with_shading.svg/1200px-Hogwarts_coat_of_arms_colored_with_shading.svg.png)
+![1](https://github.com/user-attachments/assets/7ddee3b9-8ff5-4f02-89f9-46acdfb60fde)
+
+![2](https://github.com/user-attachments/assets/0299b8f4-fe6d-4648-9b60-632cbc46f0af)
+
 
 Welcome, witches, wizards, and muggles alike, to this magical GitHub repository! Whether you're a Gryffindor, Ravenclaw, Hufflepuff, or Slytherin, this project is designed to bring a little bit of Hogwarts into your coding journey. ✨
 
