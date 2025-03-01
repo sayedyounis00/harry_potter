@@ -7,7 +7,7 @@ class ChooseHouse extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:ChooseHouseBody(),
+      body: ChooseHouseBody(),
     );
   }
 }

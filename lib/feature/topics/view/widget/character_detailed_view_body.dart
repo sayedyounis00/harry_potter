@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:harry_potter/core/style/styles.dart';
+import 'package:harry_potter/feature/topics/data/model/character/character.dart';
 import 'package:harry_potter/feature/topics/view/widget/wand_detailed_widget.dart';
 import 'package:harry_potter/feature/topics/view/widget/wrap_names_widget.dart';
 
 class CharacterDetailedViewBody extends StatelessWidget {
   final Color gryffindorRed = const Color(0xFFDA291C);
   final Color gold = const Color(0xFFFFD700);
-
-  const CharacterDetailedViewBody({super.key});
+  final CharacterModel characterModel;
+  const CharacterDetailedViewBody({
+    super.key,
+    required this.characterModel,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +28,7 @@ class CharacterDetailedViewBody extends StatelessWidget {
               // Character Image
               ClipOval(
                 child: Image.network(
-                  "https://ik.imagekit.io/hpapi/harry.jpg",
+                  characterModel.image!,
                   width: 180,
                   height: 180,
                   loadingBuilder: (context, child, loadingProgress) {
@@ -36,11 +40,11 @@ class CharacterDetailedViewBody extends StatelessWidget {
               const SizedBox(height: 20),
 
               // Name and House
-              Text("Harry Potter",
+              Text(characterModel.name ?? " ",
                   style: AppStyles.font24Bold.copyWith(
                     color: gryffindorRed,
                   )),
-              Text("Gryffindor House",
+              Text(characterModel.house ?? " ",
                   style: AppStyles.font16Regular.copyWith(
                     color: Colors.grey[600],
                   )),
@@ -50,15 +54,17 @@ class CharacterDetailedViewBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  infoTile("Species:", "Human"),
-                  infoTile("Gender:", "Male"),
-                  infoTile("Born:", "31 July 1980"),
+                  infoTile("Species:", characterModel.species ?? " "),
+                  infoTile("Gender:", characterModel.gender ?? " "),
+                  infoTile("Born:", characterModel.dateOfBirth ?? " "),
                 ],
               ),
               const SizedBox(height: 15),
 
               // Alternate Names
-              const WrapTitleWidget(),
+              WrapTitleWidget(
+                names: characterModel.alternateNames!,
+              ),
               const SizedBox(height: 15),
 
               // Wizard Details
@@ -70,7 +76,8 @@ class CharacterDetailedViewBody extends StatelessWidget {
                       children: [
                         Text("Wizard:", style: AppStyles.infoLabelStyle),
                         const SizedBox(height: 4),
-                        Text("Yes", style: AppStyles.font16Regular),
+                        Text(characterModel.wizard == true ? "YES" : "NO",
+                            style: AppStyles.font16Regular),
                       ],
                     ),
                   ),
@@ -80,7 +87,8 @@ class CharacterDetailedViewBody extends StatelessWidget {
                       children: [
                         Text("Ancestry:", style: AppStyles.infoLabelStyle),
                         const SizedBox(height: 4),
-                        Text("Half-Blood", style: AppStyles.font16Regular),
+                        Text(characterModel.ancestry ?? " ",
+                            style: AppStyles.font16Regular),
                       ],
                     ),
                   ),
@@ -131,7 +139,10 @@ class CharacterDetailedViewBody extends StatelessWidget {
               ),
               const SizedBox(height: 15),
               // Wand Details
-              WandDetailsWidget(gold: gold),
+              WandDetailsWidget(
+                gold: gold,
+                character: characterModel,
+              ),
             ],
           ),
         ]),

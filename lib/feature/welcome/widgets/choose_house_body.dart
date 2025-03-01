@@ -74,11 +74,10 @@ class _ChooseHouseBodyState extends State<ChooseHouseBody> {
             : CustumButton(
                 child: const Text(" Start "),
                 onTap: () {
-                  Navigator.pushNamed(context,AppRoutes.homePage);
+                  Navigator.pushNamed(context, AppRoutes.homePage);
                 },
               ),
       ],
     );
   }
 }
-

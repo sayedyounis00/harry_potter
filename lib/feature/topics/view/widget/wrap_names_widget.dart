@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class WrapTitleWidget extends StatelessWidget {
+  final List<dynamic> names;
   const WrapTitleWidget({
-    super.key,
+    super.key, required this.names,
   });
 
   @override
@@ -11,12 +12,7 @@ class WrapTitleWidget extends StatelessWidget {
       spacing: 8,
       runSpacing: 4,
       children: [
-        for (var name in [
-          "The Boy Who Lived",
-          "The Chosen One",
-          "Undesirable No. 1",
-          "Potty"
-        ])
+        for (var name in names)
           Chip(
             label: Text(name),
             backgroundColor: Colors.black,

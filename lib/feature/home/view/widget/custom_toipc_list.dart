@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:harry_potter/core/routing/routes.dart';
 import 'package:harry_potter/feature/home/data/topic_model.dart';
+import 'package:harry_potter/feature/topics/view%20model/characters/characters_cubit.dart';
 
 class CustomTopicBox extends StatelessWidget {
   final TopicModel topicModel;
@@ -12,6 +14,7 @@ class CustomTopicBox extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
+            BlocProvider.of<CharactersCubit>(context).getAllCharacters();
             Navigator.pushNamed(context, AppRoutes.charcterView);
           },
           child: Container(
