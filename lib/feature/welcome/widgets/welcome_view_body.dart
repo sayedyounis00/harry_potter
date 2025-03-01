@@ -40,12 +40,13 @@ class WelcomeViewBody extends StatelessWidget {
           height: 30,
         ),
         SizedBox(
-          width: size.height * .35,
+          height: size.height * .3,
+          // width: size.width * .35,
           child: Text(
             textAlign: TextAlign.center,
             Strings.welcomeText,
             style: AppStyles.font30Regular
-                .copyWith(color: AppColors.kPrimaryColor, fontFamily: "harry"),
+                .copyWith(color: AppColors.kwhiteColor, fontFamily: "harry"),
           ),
         ),
         const SizedBox(
@@ -53,7 +54,7 @@ class WelcomeViewBody extends StatelessWidget {
         ),
         TextButton(
             onPressed: () {
-              Navigator.pushNamed(context,AppRoutes.chooseHouse);
+              Navigator.pushNamed(context, AppRoutes.chooseHouse);
             },
             child: Text("Start",
                 style: AppStyles.font30Regular.copyWith(
